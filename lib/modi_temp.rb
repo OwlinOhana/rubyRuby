@@ -10,7 +10,7 @@ class ModiTemp < UserStart
   end
   
   def comput_kf(temper)
-    @resul = 1.8 * (temper - 273.00) + 32.00
+    @resul = 1.80 * (temper - 273.00) + 32.00
     puts resul
   end
 
