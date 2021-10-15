@@ -1,0 +1,17 @@
+AllCops:
+  NewCops: enable
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Layout/TrailingWhitespace:
+  Enabled: false
+  
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 30
