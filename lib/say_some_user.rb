@@ -1,9 +1,10 @@
 class SaySomthing
   def res_comp
-    puts 'Ваш ответ: '
-  end
-    
-  def warn_error
-    puts 'Вы допутсили ошибку, попытайтесь снова'
+    @temper, @im_temp = ComputTemp.comput
+    if @temper.zero? || @im_temp == 'a'
+      puts 'Вы допустили ошибку, попытайтесь снова'
+    else
+      puts "Ваш результат: #{@temper}"
+    end
   end
 end
