@@ -1,5 +1,4 @@
 class ModiTemp
-  
   def initialize(temper)
     @temper = temper
   end
