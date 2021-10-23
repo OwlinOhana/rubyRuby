@@ -1,27 +1,31 @@
 class ComputTemp 
   @name_temp = %w[CF FC CK KC FK KF]
 
+  def initialize(temper, im_temp)
+    @temper = temper
+    @im_temp = im_temp
+  end
+
   def comput
-    @temper, @im_temp = UserStart.arg
     if @name_temp.include?(im_temp)
+      ModiTemp.new(@temper)
       case @im_temp
       when 'CK'
-        ModiTemp.comput_ck(@temper)
+        @temper = ModiTemp.comput_ck
       when 'KC'
-        ModiTemp.comput_kc(@temper)
+        @temper = ModiTemp.comput_kc
       when 'CF'
-        ModiTemp.comput_cf(@temper)
+        @temper = ModiTemp.comput_cf
       when 'FC'
-        ModiTemp.comput_fc(@temper)
+        @temper = ModiTemp.comput_fc
       when 'FK'
-        ModiTemp.comput_fk(@temper)
+        @temper = ModiTemp.comput_fk
       when 'KF'
-        ModiTemp.comput_kf(@temper)
+        @temper = ModiTemp.comput_kf
       end        
     else
-      @temper = 0
-      @im_temp = 'a'
+      @im_temp = 'error'
     end 
-    return @temper       
+    return @temper, @im_temp       
   end
 end
