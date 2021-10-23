@@ -29,7 +29,7 @@ RSpec.describe ComputTemp do
       temperature = ComputTemp.new(1000, 'FC')
       temperature.comput
     end
-    it { is_expected.to eq 537.78 }
+    it { is_expected.to eq 537.77 }
   end
 
   describe '#correct all, FK' do
@@ -37,7 +37,7 @@ RSpec.describe ComputTemp do
       temperature = ComputTemp.new(1000, 'FK')
       temperature.comput
     end
-    it { is_expected.to eq 810.93 }
+    it { is_expected.to eq 810.92 }
   end
   
   describe '#correct all, KF' do
@@ -45,7 +45,7 @@ RSpec.describe ComputTemp do
       temperature = ComputTemp.new(1000, 'KF')
       temperature.comput
     end
-    it { is_expected.to eq 1340.33 }
+    it { is_expected.to eq 1340.6 }
   end
 
   describe '#correct all, KC' do
