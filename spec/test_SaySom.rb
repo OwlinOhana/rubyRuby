@@ -8,7 +8,8 @@ RSpec.describe SaySomething do
     end
     it { is_expected.to eq 'Вы допустили ошибку, попытайтесь снова' }
   end
-
+end
+RSpec.describe SaySomething do
   describe '#incorrect first letter, correct second' do
     subject do
       temperature = SaySomething.new(1000, 'MC')
@@ -16,7 +17,8 @@ RSpec.describe SaySomething do
     end
     it { is_expected.to eq 'Вы допустили ошибку, попытайтесь снова' }
   end
-
+end
+RSpec.describe SaySomething do
   describe '#correct all, CF' do
     subject do
       temperature = SaySomething.new(1000, 'CF')
@@ -24,7 +26,8 @@ RSpec.describe SaySomething do
     end
     it { is_expected.to eq 'Ваш результат: 1832.0' }
   end
-
+end
+RSpec.describe SaySomething do
   describe '#correct all, FC' do
     subject do
       temperature = SaySomething.new(1000, 'FC')
@@ -32,7 +35,8 @@ RSpec.describe SaySomething do
     end
     it { is_expected.to eq 'Ваш результат: 537.78' }
   end
-
+end
+RSpec.describe SaySomething do
   describe '#correct all, FK' do
     subject do
       temperature = SaySomething.new(1000, 'FK')
@@ -40,7 +44,8 @@ RSpec.describe SaySomething do
     end
     it { is_expected.to eq 'Ваш результат: 810.93' }
   end
-
+end
+RSpec.describe SaySomething do
   describe '#correct all, KF' do
     subject do
       temperature = SaySomething.new(1000, 'KF')
@@ -48,7 +53,8 @@ RSpec.describe SaySomething do
     end
     it { is_expected.to eq 'Ваш результат: 1340.33' }
   end
-
+end
+RSpec.describe SaySomething do
   describe '#correct all, KC' do
     subject do
       temperature = SaySomething.new(1000, 'KC')
@@ -56,7 +62,8 @@ RSpec.describe SaySomething do
     end
     it { is_expected.to eq 'Ваш результат: 726.85' }
   end
-
+end 
+RSpec.describe SaySomething do
   describe '#correct all, CK' do
     subject do
       temperature = SaySomething.new(1000, 'CK')
