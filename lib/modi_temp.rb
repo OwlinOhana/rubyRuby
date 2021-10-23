@@ -13,7 +13,7 @@ class ModiTemp
   end
   
   def comput_kf
-    @temper = (1.80 * (@temper - 273.00) + 32.00).floor(2)
+    @temper = ((1.80 * (@temper - 273.00) + 32.00)).floor(2)
   end
 
   def comput_fk
