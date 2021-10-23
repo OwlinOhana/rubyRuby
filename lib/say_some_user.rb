@@ -1,16 +1,14 @@
 class SaySomething
 
-  def initialize(temper, im_temp)
+  def initialize(temper)
     @temper = temper
-    @im_temp = im_temp
   end
 
   def res_comp
-    @temper, @im_temp = ComputTemp.comput
-    if @im_temp == 'error'
+    @temper = ComputTemp.comput
+    if temper == 'error'
       puts 'Вы допустили ошибку, попытайтесь снова'
     else
-      @temper.to_s
       puts "Ваш результат: #{@temper}"
     end
   end
