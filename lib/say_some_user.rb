@@ -1,5 +1,4 @@
 class SaySomething
-
   def initialize(temper, im_temp)
     @temper = temper
     @im_temp = im_temp
