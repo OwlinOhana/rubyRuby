@@ -1,6 +1,5 @@
 require './lib/modi_temp'
 RSpec.describe ModiTemp do
-
   describe '#correct all, CF' do
     subject do
       temperature = ModiTemp.new(1000)
@@ -8,7 +7,8 @@ RSpec.describe ModiTemp do
     end
     it { is_expected.to eq 1832.0 }
   end
-
+end
+RSpec.describe ModiTemp do
   describe '#correct all, FC' do
     subject do
       temperature = ModiTemp.new(1000)
@@ -16,7 +16,8 @@ RSpec.describe ModiTemp do
     end
     it { is_expected.to eq 537.77 }
   end
-
+end
+RSpec.describe ModiTemp do
   describe '#correct all, FK' do
     subject do
       temperature = ModiTemp.new(1000)
@@ -24,7 +25,8 @@ RSpec.describe ModiTemp do
     end
     it { is_expected.to eq 810.92 }
   end
-  
+end
+RSpec.describe ModiTemp do  
   describe '#correct all, KF' do
     subject do
       temperature = ModiTemp.new(1000)
@@ -32,7 +34,8 @@ RSpec.describe ModiTemp do
     end
     it { is_expected.to eq 1340.6 }
   end
-
+end
+RSpec.describe ModiTemp do
   describe '#correct all, KC' do
     subject do
       temperature = ModiTemp.new(1000)
