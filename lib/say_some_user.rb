@@ -6,7 +6,7 @@ class SaySomething
 
   def res_comp
     @temper = ComputTemp.comput
-    if temper == 'error'
+    if @temper == 'error'
       puts 'Вы допустили ошибку, попытайтесь снова'
     else
       puts "Ваш результат: #{@temper}"
