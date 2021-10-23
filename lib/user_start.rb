@@ -1,6 +1,4 @@
 class UserStart
-  @om_temp = 'a'
-
   def arg_temp_date_num
     puts 'Введите значение'
     @temper = gets.chomp.to_f
