@@ -6,18 +6,17 @@ class ComputTemp
 
   def comput
     temperature = ModiTemp.new(@temper)
-    case @im_temp
-    when 'CK'
+    if @im_temp == 'CK'
       @temper = temperature.comput_ck
-    when 'KC'
+    elif @im_temp == 'KC'
       @temper = temperature.comput_kc
-    when 'CF'
+    elif @im_temp == 'CF'
       @temper = temperature.comput_cf
-    when 'FC'
+    elif @im_temp == 'FC'
       @temper = temperature.comput_fc
-    when 'FK'
+    elif @im_temp == 'FK'
       @temper = temperature.comput_fk
-    when 'KF'
+    elif @im_temp == 'KF'
       @temper = temperature.comput_kf
     else
       @temper = 'error'
