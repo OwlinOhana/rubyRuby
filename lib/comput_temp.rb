@@ -8,15 +8,15 @@ class ComputTemp
     temperature = ModiTemp.new(@temper)
     if @im_temp == 'CK'
       @temper = temperature.comput_ck
-    elif @im_temp == 'KC'
+      elif @im_temp == 'KC'
       @temper = temperature.comput_kc
-    elif @im_temp == 'CF'
+      elif @im_temp == 'CF'
       @temper = temperature.comput_cf
-    elif @im_temp == 'FC'
+      elif @im_temp == 'FC'
       @temper = temperature.comput_fc
-    elif @im_temp == 'FK'
+      elif @im_temp == 'FK'
       @temper = temperature.comput_fk
-    elif @im_temp == 'KF'
+      elif @im_temp == 'KF'
       @temper = temperature.comput_kf
     else
       @temper = 'error'
