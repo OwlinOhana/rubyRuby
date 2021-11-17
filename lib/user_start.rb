@@ -16,22 +16,26 @@ class UserStart
   def put_scale_in
     puts 'Введите единицу измерения'
     @im_temp = gets.chomp
-    unless ErrorHandler.new.check_correct_scale(@im_temp)
+    if ErrorHandler.new.check_correct_scale(@im_temp) == false
       put_scale_in
+    else
+      @im_temp = @im_temp
     end
-    return @im_temp
   end
 
   def put_scale_om
     puts 'Введите единицу измерения,в которую необходимо перевести'
     @om_temp = gets.chomp
-    unless ErrorHandler.new.check_correct_scale(@om_temp)
-      put_scale_om
+    if ErrorHandler.new.check_correct_scale(@om_temp) == false
+      put_scale_in
+    else
+      @om_temp = @om_temp
     end
-    unless ErrorHandler.new.check_repeating_scale(@im_temp, @om_temp)
-      put_scale_om
+
+    if ErrorHandler.new.check_repeating_scale(@im_temp, @om_temp) == false
+      put_scale_in
+    else
+      @om_temp = @om_temp
     end
-    return @om_temp
   end
-  
 end
