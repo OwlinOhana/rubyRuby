@@ -1,5 +1,6 @@
 require './lib/error_handler'
-RSpec.describe ErrorHanlder do
+
+RSpec.describe ErrorHandler do
   describe '#check_correct_scale' do
     context 'correct scale' do
       subject { ErrorHandler.new.check_correct_scale('F') }
