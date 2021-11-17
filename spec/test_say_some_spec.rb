@@ -1,74 +1,37 @@
-require './lib/say_some_user'
+require './lib/output_value'
 
-RSpec.describe SaySomething do
-  describe '#correct first letter, incorrect second letter' do
-    subject do
-      temperature = SaySomething.new(1000, 'KP')
-      temperature.res_comp
-    end
-    it { is_expected.to eq 'Вы допустили ошибку, попытайтесь снова' }
-  end
-end
-RSpec.describe SaySomething do
-  describe '#incorrect first letter, correct second' do
-    subject do
-      temperature = SaySomething.new(1000, 'MC')
-      temperature.res_comp
-    end
-    it { is_expected.to eq 'Вы допустили ошибку, попытайтесь снова' }
-  end
-end
-RSpec.describe SaySomething do
-  describe '#correct all, CF' do
-    subject do
-      temperature = SaySomething.new(1000, 'CF')
-      temperature.res_comp
-    end
+RSpec.context OutputValue do
+  describe '#print value' do
+  context 'F->C' do
+    subject { OutputValue.new(1000, 'C', 'F').res_comp }
     it { is_expected.to eq 'Ваш результат: 1832.0' }
   end
-end
-RSpec.describe SaySomething do
-  describe '#correct all, FC' do
-    subject do
-      temperature = SaySomething.new(1000, 'FC')
-      temperature.res_comp
-    end
-    it { is_expected.to eq 'Ваш результат: 537.78' }
+
+  context 'F->C' do
+    subject { OutputValue.new(1000, 'F', 'C').res_comp }
+    it { is_expected.to eq 'Ваш результат: 537.77' }
   end
-end
-RSpec.describe SaySomething do
-  describe '#correct all, FK' do
-    subject do
-      temperature = SaySomething.new(1000, 'FK')
-      temperature.res_comp
-    end
-    it { is_expected.to eq 'Ваш результат: 810.93' }
+
+  context 'F->K' do
+    subject { OutputValue.new(1000, 'F', 'K').res_comp }
+    it { is_expected.to eq 'Ваш результат: 810.92' }
   end
-end
-RSpec.describe SaySomething do
-  describe '#correct all, KF' do
-    subject do
-      temperature = SaySomething.new(1000, 'KF')
-      temperature.res_comp
-    end
-    it { is_expected.to eq 'Ваш результат: 1340.33' }
+
+  context 'K->F' do
+    subject { OutputValue.new(1000, 'K', 'F').res_comp }
+    it { is_expected.to eq 'Ваш результат: 1340.6' }
   end
-end
-RSpec.describe SaySomething do
-  describe '#correct all, KC' do
-    subject do
-      temperature = SaySomething.new(1000, 'KC')
-      temperature.res_comp
-    end
+
+  context 'K->C' do
+    subject { OutputValue.new(1000, 'K', 'C').res_comp }
     it { is_expected.to eq 'Ваш результат: 726.85' }
   end
-end 
-RSpec.describe SaySomething do
-  describe '#correct all, CK' do
-    subject do
-      temperature = SaySomething.new(1000, 'CK')
-      temperature.res_comp
-    end
+
+  context 'C->K' do
+    subject { OutputValue.new(1000, 'C', 'K').res_comp }
     it { is_expected.to eq 'Ваш результат: 1273.15' }
   end
+  end
 end
+
+
