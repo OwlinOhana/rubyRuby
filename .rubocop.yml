@@ -11,8 +11,11 @@ Layout/TrailingWhitespace:
   Enabled: false
   
 Metrics/MethodLength:
-  Max: 30
+  Max: 25
 
-Metrics/BlockLength:
+Metrics/AbcSize:
+  Max: 25
+
+  Metrics/BlockLength:
   Exclude:
     - "spec/**/*_spec.rb"
