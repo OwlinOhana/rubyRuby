@@ -19,7 +19,7 @@ class UserStart
     if ErrorHandler.new.check_correct_scale(@im_temp) == false
       put_scale_in
     else
-      @im_temp = @im_temp
+      @im_temp
     end
   end
 
@@ -29,13 +29,13 @@ class UserStart
     if ErrorHandler.new.check_correct_scale(@om_temp) == false
       put_scale_in
     else
-      @om_temp = @om_temp
+      @om_temp 
     end
 
     if ErrorHandler.new.check_repeating_scale(@im_temp, @om_temp) == false
       put_scale_in
     else
-      @om_temp = @om_temp
+      @om_temp
     end
   end
 end
