@@ -6,7 +6,7 @@ RSpec.describe ErrorHanlder do
     end
 
     context 'uncorrect scale' do
-      subject { ErrorHanlder.new.check_correct_scale('f') }
+      subject { ErrorHanlder.new.check_correct_scale('M') }
       it { is_expected.to eq false }
     end
   end
