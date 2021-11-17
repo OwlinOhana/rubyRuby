@@ -1,4 +1,4 @@
-class ErrorHanlder
+class ErrorHandler
   def check_correct_scale(scale)
     if %w[C F K].include? scale
       true
