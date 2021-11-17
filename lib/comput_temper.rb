@@ -18,6 +18,6 @@ class ComputTemper
         'F' => ->(x) { ((x - 273.15) * 1.8) + 32 }
       }
     }
-    scale_map[@source_scale][@target_scale].call(@value).round(2)
+    scale_map[@im_temp][@om_temp].call(@temper).round(2)
   end     
 end
