@@ -1,12 +1,12 @@
+require './lib/comput_temper'
+require './lib/user_start'
 class OutputValue
-  def initialize(temper, im_temp, om_temp)
-    @temper = temper
-    @im_temp = im_temp
-    @om_temp = om_temp
-  end
-
-  def res_comp
-    @temper = ComputTemper.new(@temper, @im_temp, om_temp).comput_temper
-    puts "Ваш результат: #{@temper}"
+  def run
+    temper = UserStart.new.arg_temp_date_num 
+    source_scale = UserStart.new.put_scale_in
+    target_scale = UserStart.new.put_scale_om
+    puts "#{temper}, #{source_scale}, #{target_scale}"
+    temper = ComputTemper.new(temper, source_scale, target_scale).comput_temper
+    puts "Ваш результат: #{temper}"
   end
 end
