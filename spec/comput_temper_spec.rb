@@ -1,4 +1,4 @@
-require './lib/comput_temp'
+require './lib/comput_temper'
 RSpec.context ComputTemper do
   describe '#converter' do
     context 'C->F' do
