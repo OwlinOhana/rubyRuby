@@ -8,7 +8,7 @@ RSpec.context ComputTemper do
 
     context 'F->C' do
       subject { ComputTemper.new(1000, 'F', 'C').comput_temper }
-      it { is_expected.to eq 542.08 }
+      it { is_expected.to eq 537.77 }
     end
 
     context 'F->K' do
